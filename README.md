@@ -1,0 +1,1 @@
+Official workspace templates, configuration files, and code examples for the Microcontrollers course.
