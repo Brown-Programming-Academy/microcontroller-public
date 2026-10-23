@@ -87,7 +87,6 @@ int main()
     // 2. Setters
     // ==========================================
 
-    dog_set_name(&bitBite, "BitBite");
     dog_set_age(&bitBite, 7);
     dog_set_is_happy(&bitBite, 1);
     dog_set_is_hungry(&bitBite, 0);
@@ -97,7 +96,6 @@ int main()
     // 3. Getters
     // ==========================================
     
-    printf("Name:      %s\n", dog_get_name(bitBite));
     printf("Age:       %d\n", dog_get_age(bitBite));
     printf("Happy:     %s\n", dog_get_is_happy(bitBite) ? "Yes" : "No");
     printf("Hungry:    %s\n", dog_get_is_hungry(bitBite) ? "Yes" : "No");
