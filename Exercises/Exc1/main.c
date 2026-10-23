@@ -24,7 +24,7 @@ int dog_set_is_hungry(unsigned char* dog, int status)
 /// @param dog Pointer to the byte holding the dog's attributes.
 /// @param sex 'M' for male or 'F' for female.
 /// @return 0 on success, non-zero if dog is NULL or sex is invalid.
-int dog_set_sex(unsigned char* dog, unsigned char sex)
+int dog_set_sex(unsigned char* dog, char sex)
 {
     return 0;
 }
@@ -59,7 +59,7 @@ int dog_get_is_hungry(unsigned char dog)
 /// @brief Reads the sex bit of the dog byte.
 /// @param dog The byte holding the dog's attributes.
 /// @return 'M' if the dog is male, 'F' if female.
-unsigned char dog_get_sex(unsigned char dog)
+char dog_get_sex(unsigned char dog)
 {
     return 0;
 }
