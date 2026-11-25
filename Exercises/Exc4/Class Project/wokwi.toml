@@ -1,0 +1,9 @@
+[wokwi]
+version = 1
+# pick the implementation to simulate (build it first: pio run -e <env>)
+firmware = '.pio/build/baremetal/firmware.bin'
+elf = '.pio/build/baremetal/firmware.elf'
+# firmware = '.pio/build/espidf/firmware.bin'
+# elf = '.pio/build/espidf/firmware.elf'
+# firmware = '.pio/build/arduino/firmware.bin'
+# elf = '.pio/build/arduino/firmware.elf'

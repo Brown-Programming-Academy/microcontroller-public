@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "liorb",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+
+    { "type": "wokwi-led", "id": "ledR", "top": -90, "left": 250, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "ledG", "top": -90, "left": 320, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledB", "top": -90, "left": 390, "attrs": { "color": "blue" } },
+    { "type": "wokwi-resistor", "id": "rR", "top": 0, "left": 230, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rG", "top": 0, "left": 300, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rB", "top": 0, "left": 370, "rotate": 90, "attrs": { "value": "220" } },
+
+    { "type": "wokwi-pushbutton", "id": "btnR", "top": 120, "left": 230, "attrs": { "color": "red", "label": "R" } },
+    { "type": "wokwi-pushbutton", "id": "btnG", "top": 180, "left": 230, "attrs": { "color": "green", "label": "G" } },
+    { "type": "wokwi-pushbutton", "id": "btnB", "top": 240, "left": 230, "attrs": { "color": "blue", "label": "B" } },
+
+    { "type": "wokwi-buzzer", "id": "bz", "top": 120, "left": 380, "attrs": { "volume": "0.2" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "esp:4", "rR:1", "red", [] ],
+    [ "rR:2", "ledR:A", "red", [] ],
+    [ "ledR:C", "esp:GND.1", "black", [] ],
+    [ "esp:5", "rG:1", "green", [] ],
+    [ "rG:2", "ledG:A", "green", [] ],
+    [ "ledG:C", "esp:GND.1", "black", [] ],
+    [ "esp:6", "rB:1", "blue", [] ],
+    [ "rB:2", "ledB:A", "blue", [] ],
+    [ "ledB:C", "esp:GND.1", "black", [] ],
+
+    [ "esp:15", "btnR:1.l", "red", [] ],
+    [ "btnR:2.l", "esp:GND.2", "black", [] ],
+    [ "esp:16", "btnG:1.l", "green", [] ],
+    [ "btnG:2.l", "esp:GND.2", "black", [] ],
+    [ "esp:17", "btnB:1.l", "blue", [] ],
+    [ "btnB:2.l", "esp:GND.2", "black", [] ],
+
+    [ "esp:1", "bz:2", "orange", [] ],
+    [ "bz:1", "esp:GND.2", "black", [] ]
+  ]
+}
